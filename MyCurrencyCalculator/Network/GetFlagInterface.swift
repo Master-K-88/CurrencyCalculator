@@ -1,0 +1,35 @@
+//
+//  GetFlagInterface.swift
+//  MyCurrencyCalculator
+//
+//  Created by Prof_K on 29/07/2023.
+//
+
+import UIKit
+
+protocol GetFlagInterface {
+    func getFlag(for currency: String) -> String
+}
+
+extension GetFlagInterface {
+    func getFlag(for currency: String) -> String {
+        let base: UInt32 = 127397
+        var code = currency
+        code.removeLast()
+
+        var flag = ""
+        for i in code.unicodeScalars {
+            if let scalarValue = UnicodeScalar(base + i.value) {
+                flag.append(String(scalarValue))
+            }
+        }
+        return flag
+    }
+}
+
+
+struct Currency: Identifiable {
+    var id = UUID().uuidString
+    var currencyName: String
+    var currencyValue: Double
+}
