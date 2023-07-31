@@ -156,8 +156,6 @@ extension LineChartView {
          lineChartView.leftAxis.granularity = 1
          lineChartView.dragYEnabled = false
          lineChartView.dragEnabled = true
-         lineChartView.leftAxis.axisLineWidth = 0 // to remove Left Line
-         lineChartView.rightAxis.axisLineWidth = 0 // to remove Right Line
          lineChartView.xAxis.axisLineWidth = 0
         return lineChartView
     }
