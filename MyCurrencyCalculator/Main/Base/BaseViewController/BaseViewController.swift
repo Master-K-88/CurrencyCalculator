@@ -72,8 +72,8 @@ class BaseViewController: UIViewController {
             textField?.keyboardType = .numberPad
         }
         
-//        chartView.addSubview(chartDetailView)
-//        chartDetailView.fillSuperView()
+        chartView.addSubview(chartDetailView)
+        chartDetailView.fillSuperView()
     }
     
     override func viewDidLayoutSubviews() {

@@ -440,7 +440,7 @@
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XF0-da-uwy">
                                                         <rect key="frame" x="20" y="85" width="353" height="400"/>
-                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="400" id="PLE-XR-k94"/>
                                                         </constraints>

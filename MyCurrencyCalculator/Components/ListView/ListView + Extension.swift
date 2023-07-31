@@ -11,7 +11,7 @@ extension ListInterface {
     func addTransparentView(on bgView: UIView, below item: UIView) {
         guard let frames = frames else { return }
         var height = CGFloat(menuItems.count * cellHeight)
-        if height + frames.height + frames.origin.y + 100 > bgView.bounds.height {
+        if height + frames.height + frames.origin.y + 100 > (bgView.bounds.height - frames.origin.y) {
             height = CGFloat(5 * cellHeight)
         }
         bgView.addSubview(transparentView)

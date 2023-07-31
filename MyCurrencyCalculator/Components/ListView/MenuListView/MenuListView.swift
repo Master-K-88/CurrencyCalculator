@@ -20,6 +20,8 @@ class MenuListView: UIView, ListInterface {
              reuseIdentifier: ListCell.identifier
          )
          tableView.separatorStyle = .none
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = false
          tableView.rowHeight = 52
          return tableView
      }()
