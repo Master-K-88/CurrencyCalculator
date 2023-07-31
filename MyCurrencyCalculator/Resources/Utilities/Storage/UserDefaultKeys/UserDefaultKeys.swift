@@ -8,5 +8,5 @@
 import Foundation
 
 enum UserdefaultKeys: String {
-    case login
+    case login, firstName
 }

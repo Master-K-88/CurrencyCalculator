@@ -16,19 +16,20 @@ protocol ServiceProtocol {
     ///   - url: url for request
     ///   - method: methods for POST, GET, PUT and DELETE
     ///   - parameters: request body as dictionary or
-    /// - Returns: returns AnyPublisher with the data response
-    func requestWithParameter<Y: Encodable>(url :String,
+    /// - Returns: returns AnyPublisher with the JSON response
+    func requestWithParameter(url :String,
                              method: HTTPMethod,
-                             parameters: Y?) -> AnyPublisher<JSON, Error>
+                              parameters: [String: Any]?) -> AnyPublisher<JSON, Error>
 }
 
 extension ServiceProtocol {
-    func requestWithParameter<Y: Encodable>(
+    func requestWithParameter(
         url :String,
         method: HTTPMethod,
-        parameters: Y?) -> AnyPublisher<JSON, Error> {
+        parameters: [String: Any]?) -> AnyPublisher<JSON, Error> {
             return AF.request(url).publishData()
                 .tryMap { response -> JSON in
+                    print("Here is the response: \(response.data)")
                     let json = try JSON(data: response.data ?? Data())
                     return json
                 }

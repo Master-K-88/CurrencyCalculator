@@ -17,8 +17,8 @@ class BaseViewController: UIViewController {
     @IBOutlet weak var btnConvertingLabel: UILabel!
     @IBOutlet weak var btnConvertedLabel: UILabel!
     
-    @IBOutlet weak var btnConvertingIcon: UIImageView!
-    @IBOutlet weak var btnConvertedIcon: UIImageView!
+    @IBOutlet weak var btnConvertingIcon: UILabel!
+    @IBOutlet weak var btnConvertedIcon: UILabel!
     
     @IBOutlet weak var convertingTextField: UITextField!
     @IBOutlet weak var convertedTextField: UITextField!
@@ -30,7 +30,29 @@ class BaseViewController: UIViewController {
     @IBOutlet weak var ninetyDaysLabel: UILabel!
     
     @IBOutlet weak var chartView: UIView!
+    @IBOutlet weak var mainChartView: UIView!
     @IBOutlet weak var descriptionView: UIView!
+    
+    @IBOutlet weak var convertingView: UIView!
+    @IBOutlet weak var convertedView: UIView!
+    
+    let chartDetailView = ChartView()
+    
+    lazy var convertingDropdownView = MenuListView(
+        listData: viewModel.listItem,
+        selectedValue: SelectedItemConverting,
+        parentView: self.view,
+        frame: convertingView.frame,
+        hideLabel: true,
+        cellHeight: 50)
+    
+    lazy var convertedDropdownView = MenuListView(
+        listData: viewModel.listItem,
+        selectedValue: SelectedItemConverted,
+        parentView: self.view,
+        frame: convertingView.frame,
+        hideLabel: true,
+        cellHeight: 50)
     
     var viewModel: BaseViewModel = BaseViewModel()
     var cancellables = Set<AnyCancellable>()
@@ -39,11 +61,27 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         observeViewModel()
         daysViewsTapped(thirtyDaysTapped: true)
-        setupConvertingLabel(labelString: "EUR", icon: UIImage(systemName: "person.circle.fill"))
-        setupConvertedLabel(labelString: "PLN", icon: UIImage(systemName: "person.circle"))
+        setupConvertingLabel(labelString: "EUR", icon: viewModel.getFlag(for: "EUR"))
+        setupConvertedLabel(labelString: "PLN", icon: viewModel.getFlag(for: "PLN"))
         // Do any additional setup after loading the view.
-//        let currentConfiguration = Bundle.main.object(forInfoDictionaryKey: "FixerAPIKey") as! String
-//        print("here is the build api key: \(currentConfiguration)")
+        convertingView.addSubview(convertingDropdownView)
+        convertedView.addSubview(convertedDropdownView)
+        
+        [convertingTextField, convertedTextField].forEach { textField in
+            textField?.delegate = self
+            textField?.keyboardType = .numberPad
+        }
+        
+//        chartView.addSubview(chartDetailView)
+//        chartDetailView.fillSuperView()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        convertingDropdownView.fillSuperView()
+        convertedDropdownView.fillSuperView()
+        convertingDropdownView.cornerRadius = 5
+        convertedDropdownView.cornerRadius = 5
     }
     
     //MARK: Observing user log in state
@@ -52,24 +90,26 @@ class BaseViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] value in
                 guard let self else { return }
-                title = value ? "Username" : ""
+                let username = viewModel.retreiveData(UserdefaultKeys.firstName.rawValue, of: String.self) ?? ""
+                title = value ? "\(username)" : ""
                 chartView.isHidden = !value
+                navigationItem.rightBarButtonItem?.isHidden = value
                 descriptionView.isHidden = value
             }
             .store(in: &cancellables)
     }
     
     //MARK: Updating Label elements
-    internal func setupConvertingLabel(labelString: String, icon: UIImage? = nil) {
+    internal func setupConvertingLabel(labelString: String, icon: String? = nil) {
         convertingLabel.text = labelString
         btnConvertingLabel.text = labelString
-        btnConvertingIcon.image = icon
+        btnConvertingIcon.text = icon
     }
     
-    internal func setupConvertedLabel(labelString: String, icon: UIImage? = nil) {
+    internal func setupConvertedLabel(labelString: String, icon: String? = nil) {
         convertedLabel.text = labelString
         btnConvertedLabel.text = labelString
-        btnConvertedIcon.image = icon
+        btnConvertedIcon.text = icon
     }
     
     //MARK: Handling Signup Tapped by Presenting the Signup View
@@ -87,18 +127,8 @@ class BaseViewController: UIViewController {
     }
     
     @IBAction
-    internal func convertingButtonTapped(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction
-    internal func convertedButtonTapped(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction
     internal func convertButtonTapped(_ sender: UIButton) {
-        
+        print("Will be converting the currency here")
     }
     
     @IBAction
@@ -131,13 +161,34 @@ class BaseViewController: UIViewController {
         let convertingLabelString = convertingLabel.text ?? ""
         let convertedLabelString = convertedLabel.text ?? ""
         
-        let convertingIcon = btnConvertingIcon.image
-        let convertedIcon = btnConvertedIcon.image
+        let convertingIcon = btnConvertingIcon.text
+        let convertedIcon = btnConvertedIcon.text
         
         convertedTextField.text = ""
         
         setupConvertingLabel(labelString: convertedLabelString, icon: convertedIcon)
         setupConvertedLabel(labelString: convertingLabelString, icon: convertingIcon)
     }
+    
+    func SelectedItemConverting(_ item: ListItemInterface) {
+        btnConvertingLabel.text = item.value
+        btnConvertingIcon.text = item.icon
+        convertingLabel.text = item.value
+    }
+    
+    func SelectedItemConverted(_ item: ListItemInterface) {
+        btnConvertedLabel.text = item.value
+        btnConvertedIcon.text = item.icon
+        convertedLabel.text = item.value
+    }
 }
 
+
+extension BaseViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        var text = textField.text ?? "" + string
+        text = text.replacingOccurrences(of: ",", with: "")
+        textField.text = text.formattedValue
+        return true
+    }
+}

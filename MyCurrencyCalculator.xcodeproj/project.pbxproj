@@ -20,6 +20,17 @@
 		042EA1AB2A656DA800685385 /* NetworkServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042EA1AA2A656DA800685385 /* NetworkServiceInterface.swift */; };
 		043B41412A7649F400D894CF /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 043B41402A7649F400D894CF /* IQKeyboardManagerSwift */; };
 		045154A02A75A6D900D53CFF /* FixerKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451549F2A75A6D900D53CFF /* FixerKey.swift */; };
+		0458902B2A76C4C8005513AD /* Double + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458902A2A76C4C8005513AD /* Double + Extension.swift */; };
+		0458902E2A76CB60005513AD /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458902D2A76CB60005513AD /* ChartView.swift */; };
+		0458903C2A76E7BB005513AD /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 0458903B2A76E7BB005513AD /* DGCharts */; };
+		0458903E2A76E93E005513AD /* ChartView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458903D2A76E93E005513AD /* ChartView + Extension.swift */; };
+		045F5B502A7688980052296F /* ListViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F5B4F2A7688970052296F /* ListViewInterface.swift */; };
+		045F5B522A7689A20052296F /* ListViewPropertyInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F5B512A7689A20052296F /* ListViewPropertyInterface.swift */; };
+		045F5B542A768A5E0052296F /* ListView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F5B532A768A5E0052296F /* ListView + Extension.swift */; };
+		045F5B572A768B3D0052296F /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F5B562A768B3D0052296F /* ListCell.swift */; };
+		045F5B5A2A768E520052296F /* MenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F5B592A768E520052296F /* MenuListView.swift */; };
+		045F5B5C2A768EC40052296F /* UITableView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F5B5B2A768EC40052296F /* UITableView + Extension.swift */; };
+		045F5B5E2A7697E30052296F /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F5B5D2A7697E30052296F /* ListModel.swift */; };
 		046FB05C2A6346C1000A0B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB05B2A6346C1000A0B3F /* AppDelegate.swift */; };
 		046FB05E2A6346C1000A0B3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB05D2A6346C1000A0B3F /* SceneDelegate.swift */; };
 		046FB0602A6346C1000A0B3F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046FB05F2A6346C1000A0B3F /* BaseViewController.swift */; };
@@ -48,6 +59,16 @@
 		042EA1A72A649F2500685385 /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		042EA1AA2A656DA800685385 /* NetworkServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceInterface.swift; sourceTree = "<group>"; };
 		0451549F2A75A6D900D53CFF /* FixerKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerKey.swift; sourceTree = "<group>"; };
+		0458902A2A76C4C8005513AD /* Double + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Extension.swift"; sourceTree = "<group>"; };
+		0458902D2A76CB60005513AD /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		0458903D2A76E93E005513AD /* ChartView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChartView + Extension.swift"; sourceTree = "<group>"; };
+		045F5B4F2A7688970052296F /* ListViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewInterface.swift; sourceTree = "<group>"; };
+		045F5B512A7689A20052296F /* ListViewPropertyInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewPropertyInterface.swift; sourceTree = "<group>"; };
+		045F5B532A768A5E0052296F /* ListView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListView + Extension.swift"; sourceTree = "<group>"; };
+		045F5B562A768B3D0052296F /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		045F5B592A768E520052296F /* MenuListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListView.swift; sourceTree = "<group>"; };
+		045F5B5B2A768EC40052296F /* UITableView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Extension.swift"; sourceTree = "<group>"; };
+		045F5B5D2A7697E30052296F /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		046FB0582A6346C1000A0B3F /* MyCurrencyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCurrencyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046FB05B2A6346C1000A0B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046FB05D2A6346C1000A0B3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +91,7 @@
 				046FB0762A634A95000A0B3F /* RealmSwift in Frameworks */,
 				046FB0742A634A95000A0B3F /* Realm in Frameworks */,
 				046FB0792A634B54000A0B3F /* SwiftyJSON in Frameworks */,
+				0458903C2A76E7BB005513AD /* DGCharts in Frameworks */,
 				046FB0712A634776000A0B3F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +159,53 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		0458902C2A76CB51005513AD /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+				0458902D2A76CB60005513AD /* ChartView.swift */,
+				0458903D2A76E93E005513AD /* ChartView + Extension.swift */,
+			);
+			path = ChartView;
+			sourceTree = "<group>";
+		};
+		045F5B4D2A7688590052296F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0458902C2A76CB51005513AD /* ChartView */,
+				045F5B4E2A7688640052296F /* ListView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		045F5B4E2A7688640052296F /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				045F5B582A768E420052296F /* MenuListView */,
+				045F5B552A768B2B0052296F /* ListCell */,
+				045F5B4F2A7688970052296F /* ListViewInterface.swift */,
+				045F5B512A7689A20052296F /* ListViewPropertyInterface.swift */,
+				045F5B532A768A5E0052296F /* ListView + Extension.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		045F5B552A768B2B0052296F /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				045F5B562A768B3D0052296F /* ListCell.swift */,
+			);
+			path = ListCell;
+			sourceTree = "<group>";
+		};
+		045F5B582A768E420052296F /* MenuListView */ = {
+			isa = PBXGroup;
+			children = (
+				045F5B592A768E520052296F /* MenuListView.swift */,
+				045F5B5D2A7697E30052296F /* ListModel.swift */,
+			);
+			path = MenuListView;
+			sourceTree = "<group>";
+		};
 		046FB04F2A6346C1000A0B3F = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +225,7 @@
 		046FB05A2A6346C1000A0B3F /* MyCurrencyCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				045F5B4D2A7688590052296F /* Components */,
 				042EA1A92A656CFD00685385 /* Network */,
 				04C479482A63A7880033FD52 /* Main */,
 				04C479492A63A7B10033FD52 /* Resources */,
@@ -179,6 +249,8 @@
 				042EA1A02A649D7900685385 /* UIView + Extension + AutoLayout.swift */,
 				042EA1A52A649EC100685385 /* UITextField + Extension.swift */,
 				042EA1A72A649F2500685385 /* UIButton + Extension.swift */,
+				045F5B5B2A768EC40052296F /* UITableView + Extension.swift */,
+				0458902A2A76C4C8005513AD /* Double + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +352,7 @@
 				046FB0752A634A95000A0B3F /* RealmSwift */,
 				046FB0782A634B54000A0B3F /* SwiftyJSON */,
 				043B41402A7649F400D894CF /* IQKeyboardManagerSwift */,
+				0458903B2A76E7BB005513AD /* DGCharts */,
 			);
 			productName = MyCurrencyCalculator;
 			productReference = 046FB0582A6346C1000A0B3F /* MyCurrencyCalculator.app */;
@@ -314,6 +387,7 @@
 				046FB0722A634A95000A0B3F /* XCRemoteSwiftPackageReference "realm-swift" */,
 				046FB0772A634B54000A0B3F /* XCRemoteSwiftPackageReference "SwiftyJson" */,
 				043B413F2A7649F400D894CF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				0458903A2A76E7BB005513AD /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 046FB0592A6346C1000A0B3F /* Products */;
 			projectDirPath = "";
@@ -342,24 +416,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0458902B2A76C4C8005513AD /* Double + Extension.swift in Sources */,
 				04C479582A63CD440033FD52 /* UserDefaultManager.swift in Sources */,
+				045F5B5C2A768EC40052296F /* UITableView + Extension.swift in Sources */,
 				042EA1A62A649EC100685385 /* UITextField + Extension.swift in Sources */,
 				046FB0602A6346C1000A0B3F /* BaseViewController.swift in Sources */,
 				04C479512A63AA030033FD52 /* BaseViewModel.swift in Sources */,
+				045F5B502A7688980052296F /* ListViewInterface.swift in Sources */,
 				042EA1AB2A656DA800685385 /* NetworkServiceInterface.swift in Sources */,
 				042EA1A12A649D7900685385 /* UIView + Extension + AutoLayout.swift in Sources */,
+				045F5B542A768A5E0052296F /* ListView + Extension.swift in Sources */,
 				042EA1A82A649F2500685385 /* UIButton + Extension.swift in Sources */,
 				046FB05C2A6346C1000A0B3F /* AppDelegate.swift in Sources */,
 				045154A02A75A6D900D53CFF /* FixerKey.swift in Sources */,
 				046FB05E2A6346C1000A0B3F /* SceneDelegate.swift in Sources */,
 				04D807922A75BC33008DB500 /* GetFlagInterface.swift in Sources */,
 				040E654E2A63EC920019A452 /* CodableInterface.swift in Sources */,
+				045F5B5A2A768E520052296F /* MenuListView.swift in Sources */,
 				042EA19F2A647EA000685385 /* SignUpViewController.swift in Sources */,
 				042EA1A42A649E2800685385 /* SignUpView.swift in Sources */,
 				040E65542A63EF8F0019A452 /* UserDefaultServiceInterface.swift in Sources */,
+				045F5B572A768B3D0052296F /* ListCell.swift in Sources */,
 				040E65562A63F2830019A452 /* RealmServiceInterface.swift in Sources */,
 				042EA19B2A64207E00685385 /* UIView + Extension.swift in Sources */,
+				0458902E2A76CB60005513AD /* ChartView.swift in Sources */,
 				042EA1912A63FF3100685385 /* UserDefaultKeys.swift in Sources */,
+				045F5B522A7689A20052296F /* ListViewPropertyInterface.swift in Sources */,
+				045F5B5E2A7697E30052296F /* ListModel.swift in Sources */,
+				0458903E2A76E93E005513AD /* ChartView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +673,14 @@
 				version = 6.5.12;
 			};
 		};
+		0458903A2A76E7BB005513AD /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		046FB06F2A634776000A0B3F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -620,6 +712,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 043B413F2A7649F400D894CF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		0458903B2A76E7BB005513AD /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0458903A2A76E7BB005513AD /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
 		};
 		046FB0702A634776000A0B3F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
